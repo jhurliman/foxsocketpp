@@ -497,7 +497,9 @@ void OccupancyGrid::serialize(std::vector<uint8_t>& output, size_t& index) const
   WriteVector(output, index, data);
 }
 
-size_t TransformStamped::size() const { return header.size() + 4 + child_frame_id.size() + transform.size(); }
+size_t TransformStamped::size() const {
+  return header.size() + 4 + child_frame_id.size() + transform.size();
+}
 
 void TransformStamped::serialize(std::vector<uint8_t>& output, size_t& index) const {
   header.serialize(output, index);

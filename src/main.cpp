@@ -1,8 +1,7 @@
+#include <chrono>
 #include <foxsocketpp.hpp>
-
 #include <iostream>
 #include <thread>
-#include <chrono>
 
 bool running = true;
 
@@ -24,4 +23,3 @@ int main() {
 
   server.stop();
 }
-

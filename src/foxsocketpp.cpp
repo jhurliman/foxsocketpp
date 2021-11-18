@@ -1,7 +1,7 @@
 #include "foxsocketpp.hpp"
 
-#include <nlohmann/json.hpp>
 #include <iostream>
+#include <nlohmann/json.hpp>
 
 using LockGuard = std::lock_guard<std::recursive_mutex>;
 using json = nlohmann::json;
@@ -12,13 +12,9 @@ using websocketpp::lib::placeholders::_2;
 
 namespace foxsocketpp {
 
-void info(const std::string_view msg) {
-  std::cout << "[INFO] " << msg << "\n";
-}
+void info(const std::string_view msg) { std::cout << "[INFO] " << msg << "\n"; }
 
-void error(const std::string_view msg) {
-  std::cerr << "[ERROR] " << msg << "\n";
-}
+void error(const std::string_view msg) { std::cerr << "[ERROR] " << msg << "\n"; }
 
 void fatal(const std::string_view msg) {
   std::cerr << "[FATAL] " << msg << "\n";

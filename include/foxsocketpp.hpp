@@ -4,14 +4,13 @@
 //
 // foxsocketpp implements the Foxglove WebSocket protocol as a WebSocket server
 
-#include <websocketpp/config/asio_no_tls.hpp>
-#include <websocketpp/server.hpp>
-
 #include <mutex>
 #include <thread>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+#include <websocketpp/config/asio_no_tls.hpp>
+#include <websocketpp/server.hpp>
 
 #include "foxsocketpp/message_defs.hpp"
 #include "foxsocketpp/rosmsg.hpp"
